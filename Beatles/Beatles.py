@@ -25,6 +25,7 @@ def parse_file(datafile):
             fields = line.split(",")
             entry = {}
 
+            # Used for the purpose of data cleaning
             for i, value in enumerate(fields):
                 entry[header[i].strip()] = value.strip()
 
