@@ -44,6 +44,13 @@ def parse_file(datafile):
     print "Convert time to a Python datetime tuple, from the Excel float:",
     print xlrd.xldate_as_tuple(exceltime, 0)
 
+    data = {
+            'maxtime': (0, 0, 0, 0, 0, 0),
+            'maxvalue': 0,
+            'mintime': (0, 0, 0, 0, 0, 0),
+            'minvalue': 0,
+            'avgcost': 0
+    }
     return data
 
 data = parse_file(datafile)
